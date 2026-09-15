@@ -1,183 +1,208 @@
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
-    background-color: #909292;
-    color: rgb(3, 5, 8);
+    background-color: #fdf6f0;
+    color: #3e2723;
     font-weight: 300;
+    line-height: 1.5;
 }
-.maincontainer{
+
+.main-container {
     width: 100%;
     display: grid;
-    grid-template-columns: auto 30%;
+    grid-template-columns: 1fr 20%;
     overflow-x: hidden;
 }
-.col1{
-    background-color: rgb(108, 112, 106);
-    padding:0 0.5rem;
-}
-.col2{
-    background-color: rgb(77, 77, 77);
-    padding:0 0.5rem;
+
+.col1, .col2 {
+    padding: 0 0.5rem;
 }
 
-/*------------------------- Column 1 -------------------------*/
-
-.header{
+.header {
     display: flex;
-    padding: 0.5rem;
-    font-size: 25px;
-    font-weight: 500;
-    letter-spacing: 0.2rem;
-}
-.table-container{
-    height: 80vh;
-    border-radius: 10px;
-    overflow-y: hidden;
-}
-table{
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #3e3f41;
-}
-thead{
-    position: sticky;
-    top: 0;
-    background-color: #58595a;
-}
-th{
-    padding: 0.1rem 0.5rem ;
-    text-align: center;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 300;
+    padding: 0.5em;
+    border-bottom: 1px solid #d7ccc8;
 }
 
-tbody tr{
-    transition: all 0.1  ease-in-out;
-}
-
-td{
-    padding: 0.1rem 0.5rem;
-    text-align: center;
-    font-size: 14px;
-    border-bottom: 1px solid;
-}
-
-tbody tr:nth-child(even){
-background-color: #58ac6a;
-}
-
-tbody tr:hover{
-   background-color: rgb(96, 104, 101);
-   color: rgb(193, 230, 177);
-}
-/*------------------------- Column 2 -------------------------*/
-.col2-header-container{
-    display: flex;
-    justify-content: space-between;
-    padding:  0.5rem;
-}
-.col2-header h2{
-    font-size: 11px;
+.header h1 {
+    font-size: 28px;
     font-weight: 600;
     letter-spacing: 0.1rem;
+    color: #4e342e;
 }
-.col2-header p{
+
+.table-container {
+    height: 80vh;
+    border-radius: 8px;
+    overflow-y: auto;
+    border: 1px solid #d7ccc8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fbe9e7;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: #efebe9;
+}
+
+th {
+    padding: 0.4rem 0.6rem;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #5d4037;
+    border-bottom: 1px solid #d7ccc8;
+}
+
+td {
+    padding: 0.4rem 0.6rem;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 1px solid #d7ccc8;
+    color: #3e2723;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0e0d6;
+}
+
+tbody tr:hover {
+    background-color: #d7ccc8;
+    color: #000000;
+}
+
+.col2-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.col2-header h2 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    color: #4e342e;
+}
+
+.col2-header p {
     font-size: 11px;
     font-weight: 300;
-    color: #201e1e;
+    color: #6d4c41;
 }
 
-.class-action-btn-container{
-    display: flex;
-    float: right;
-}
-
-/*------------------------- Buttons -------------------------*/
-
-.button{
+.button {
     display: block;
     padding: 0.5rem 1rem;
-    font-size: 16px;
-    background-color: #070406;
+    font-size: 14px;
+    background-color: #5d4037;
     border: none;
-    border-radius: 10px;
-    margin-left: 1rem;
-    color: rgb(241, 241, 241);
+    border-radius: 6px;
+    color: #ffffff;
     cursor: pointer;
-    width: 4rem;
+    width: 5rem;
     margin: 0.2rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
-.btn-add{
-    background-color: #c5200d;
-    margin-left: 1rem;
-}
-.btn-edit{
-    background-color: #0e67a3;
-}
-.btn-delete, .btn-cancel{
-    background-color: #6ec034;
-}
-/*------------------------- textbox -------------------------*/
 
-.textbox{
-    background-color: #88ade6;
+.button:hover {
+    background-color: #ffffff;
+    color: #5d4037;
+    border: 1px solid #5d4037;
+}
+
+.btn.add {
+    background-color: #6d4c41;
+}
+
+.btn-edit {
+    background-color: #8d6e63;
+}
+
+.btn-delete, .btn-cancel {
+    background-color: #a1887f;
+}
+
+.textbox {
     position: relative;
     margin: 1rem;
     overflow: hidden;
 }
-.textbox input{
+
+.textbox input {
     width: 100%;
     height: 80%;
     border: none;
-    color: rgb(52, 132, 163);
-    background-color:#333538;
+    color: #3e2723;
+    background-color: transparent;
     padding-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
     outline: none;
-    text-transform: uppercase;
-
 }
-.txtbox-label{
-    position: none;
+
+.txtbox-label {
+    position: absolute;
     left: 0;
     bottom: 0;
-    width: 100;
+    width: 100%;
     height: 100%;
     pointer-events: none;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #bcaaa4;
+    text-transform: uppercase;
+    color: #6d4c41;
 }
-.txtbox-label::after{
+
+.txtbox-label::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    bottom: 0;
-    border-bottom: 2px solid;
-    transform: translateY(-100%);
+    bottom: -2px;
+    border-bottom: 2px solid #5d4037;
+    transform: translateX(-100%);
     transition: all 0.3s ease;
 }
-.placeholder{
+
+.placeholder {
     position: absolute;
-    font-size: 18px;
+    font-size: 16px;
     bottom: 0;
     left: 0;
     transition: all 0.3s ease;
+    color: #a1887f;
 }
+
 .textbox input:focus+ .txtbox-label .placeholder,
-.textbox input:valid+ .txtbox-label .placeholder
-{
+.textbox input:valid+ .txtbox-label .placeholder {
     transform: translateY(-150%);
     font-size: 12px;
-    color: #8d8d35;
+    color: #4e342e;
 }
+
 .textbox input:focus+ .txtbox-label::after,
-.textbox input:valid+ .txtbox-label::after
-{
-        transform: translateX(0%)
+.textbox input:valid+ .txtbox-label::after {
+    transform: translateX(0%);
+}
+
+.display-none {
+    display: none;
+}
+
+.default-text .txtbox-label {
+    border-bottom: 0px;
+}
+
+.placeholder span {
+    color: #3e2723;
 }
